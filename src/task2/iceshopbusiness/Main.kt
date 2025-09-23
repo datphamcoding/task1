@@ -23,4 +23,5 @@ fun main() {
     FrontDesk.receive(anotherOrder)
 
     println("\n--- End of Singleton Demo ---")
+
 }
