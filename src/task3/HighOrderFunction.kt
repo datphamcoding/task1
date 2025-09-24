@@ -1,6 +1,9 @@
 package task3
 
-//hàm nhận lambda lam tham so va tra ve tham so
+/**
+Hàm thực hiện một số phép tính đơn giản. Nhận vào một hàm để lấy phép tính, một hàm để lấy hai số nguyên.
+Hàm trả về một hàm không tham số trả về kết quả phép tính.
+**/
 inline fun doSimpleMath(
     getOperator: () -> String,
     getNumber: () -> Pair<Int, Int>
@@ -58,6 +61,9 @@ fun main() {
     }
 }
 
+/**
+ * Hàm yêu cầu người dùng nhập hai số nguyên và trả về một Pair chứa hai số đó.
+ */
 fun getNumber(): Pair<Int, Int> {
     print("Nhap a: ")
     val a = readln().toInt()
@@ -66,6 +72,9 @@ fun getNumber(): Pair<Int, Int> {
     return Pair(a, b)
 }
 
+/**
+ * Hàm yêu cầu người dùng chọn một phép tính từ danh sách và trả về ký tự đại diện cho phép tính đó.
+ */
 fun getOperator(): String {
     println("Nhap phep tinh:")
     println("1. +")

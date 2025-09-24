@@ -26,11 +26,12 @@ val evenNumbers1 = numbers.filter(::isEven)
 /**
 Thuộc tính mở rộng có giá trị là một biểu thức lambda. Thuộc tính này kiểm tra xem chuỗi có chứa nguyên âm không
 **/
-val String.hasVowels:()->Boolean
+val String.hasVowels
    get() = {
       val vowels = "aeiou"
       this.lowercase().any { it in vowels }
    }
+
 
 fun checkString(
    hasVowels: (String) -> Boolean,
