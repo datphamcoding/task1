@@ -46,7 +46,7 @@ suspend fun loadDataSuspend(topic: String, onResult: (List<String>) -> Unit) {
  * 1. Sử dụng `coroutineScope` để tạo một scope cho các coroutine con.
  * 2. In ra tên của luồng hiện tại để theo dõi.
  * 3. Gọi `loadTopics` để lấy danh sách các chủ đề con liên quan đến `topic` đã cho.
- * 4. Đối với mỗi chủ đề con, khởi chạy một coroutine mới bằng `async` để gọi `loadCountries`. Điều này cho phép tải dữ liệu cho các chủ đề con cùng một lúc.
+ * 4. Đối với mỗi chủ đề con, khởi chạy một coroutine mới bằng `async` để gọi `loadCountries`. Điều này cho phép khởi động việc tải dữ liệu liên tiếp.
  * 5. Sử dụng `awaitAll()` để đợi tất cả các coroutine `async` hoàn thành và thu thập kết quả của chúng.
  * 6. Làm phẳng danh sách các danh sách quốc gia thành một danh sách duy nhất.
  * 7. Gọi hàm `onResult` với danh sách các quốc gia đã được tải. In ra tên của luồng hiện tại trước khi kết thúc.

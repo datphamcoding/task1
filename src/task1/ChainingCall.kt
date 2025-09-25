@@ -54,7 +54,7 @@ fun demo3() {
 }
 
 // Tìm người trẻ nhất ở London
-fun demo5() {
+private fun demo5() {
     val youngestInLondon = people
         .filter { it.city == "London" }
         .minByOrNull { it.age }
