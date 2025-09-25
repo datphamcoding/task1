@@ -1,5 +1,8 @@
 package task3.coroutine
 
+import kotlinx.coroutines.delay
+import kotlin.time.Duration.Companion.seconds
+
 val topics = mapOf(
    "sport" to listOf("Soccer", "Basketball", "Volleyball", "Tennis"),
    "music" to listOf("Pop", "Rock", "Hip-Hop", "Jazz"),
@@ -20,3 +23,13 @@ val countriesOfTopics = mapOf(
    "Salad" to listOf("Greece", "USA", "France"),
    "Sandwich" to listOf("USA", "UK", "Vietnam")
 )
+
+suspend fun loadTopics(topic: String): List<String> {
+   delay(1.seconds)
+   return topics[topic]!!
+}
+
+suspend fun loadCountries(subTopic: String): List<String> {
+   delay(1.seconds)
+   return countriesOfTopics[subTopic]!!
+}
