@@ -1,4 +1,4 @@
-package task3.generic.bakerycoffee
+package task3
 
 import kotlin.reflect.full.memberFunctions
 import kotlin.reflect.full.memberProperties
